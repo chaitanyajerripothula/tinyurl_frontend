@@ -93,7 +93,7 @@ function Root() {
 					<ConnectedRouter
 						history={history}
 						style={{ width: '100%' }}
-						basename={process.env.PUBLIC_URL || ''}
+						basename={'https://chaitanyajerripothula.github.io/tinyurl_frontend/' || ''}
 					>
 						{children}
 					</ConnectedRouter>
