@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/chaitanyajerripothula/tinyurl_frontend/precache-manifest.f09ad8eae8d66eb3847c2b85f2b8b56e.js"
+  "/tinyurl_frontend/precache-manifest.a8ec3a5b667308cb25c63300048153b2.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/chaitanyajerripothula/tinyurl_frontend/index.html", {
+workbox.routing.registerNavigationRoute("/tinyurl_frontend/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
