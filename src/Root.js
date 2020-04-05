@@ -90,7 +90,11 @@ function Root() {
 					<div>
 						<Login show={show} onHide={handleClose} />
 					</div>
-					<ConnectedRouter history={history} style={{ width: '100%' }}>
+					<ConnectedRouter
+						history={history}
+						style={{ width: '100%' }}
+						basename={process.env.PUBLIC_URL || ''}
+					>
 						{children}
 					</ConnectedRouter>
 				</Provider>
