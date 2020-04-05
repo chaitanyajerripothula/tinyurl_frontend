@@ -90,11 +90,7 @@ function Root() {
 					<div>
 						<Login show={show} onHide={handleClose} />
 					</div>
-					<ConnectedRouter
-						history={history}
-						style={{ width: '100%' }}
-						basename={'https://chaitanyajerripothula.github.io/tinyurl_frontend/' || ''}
-					>
+					<ConnectedRouter history={history} style={{ width: '100%' }}>
 						{children}
 					</ConnectedRouter>
 				</Provider>
