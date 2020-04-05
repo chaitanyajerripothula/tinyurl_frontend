@@ -10,6 +10,7 @@ import routeConfig from './common/routeConfig';
 import history from './common/history';
 import { Navbar, Nav, Form, Button, Container, Row, Col } from 'react-bootstrap';
 import Login from './features//home/Login';
+import Register from './features//home/Register/Register';
 
 setConfig({
 	logLevel: 'debug'
@@ -51,6 +52,7 @@ function renderRouteConfigV3(routes, contextPath) {
 
 function Root() {
 	const [ show, setShow ] = useState(false);
+	const [ registerShow, setRegisterShow ] = useState(false);
 
 	const handleShow = () => {
 		setShow(true);
@@ -58,6 +60,14 @@ function Root() {
 
 	const handleClose = () => {
 		setShow(false);
+	};
+
+	const handleRegisterShow = () => {
+		setRegisterShow(true);
+	};
+
+	const handleRegisterClose = () => {
+		setRegisterShow(false);
 	};
 
 	const children = renderRouteConfigV3(routeConfig, '/');
@@ -79,7 +89,9 @@ function Root() {
 								</Button>
 							</Col>
 							<Col>
-								<Button variant="outline-info">Signup</Button>
+								<Button variant="outline-info" onClick={handleRegisterShow}>
+									Signup
+								</Button>
 							</Col>
 						</Row>
 					</Container>
@@ -89,6 +101,7 @@ function Root() {
 				<Provider store={store}>
 					<div>
 						<Login show={show} onHide={handleClose} />
+						<Register show={registerShow} onHide={handleRegisterClose} />
 					</div>
 					<ConnectedRouter history={history} style={{ width: '100%' }}>
 						{children}
