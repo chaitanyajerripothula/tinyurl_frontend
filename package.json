@@ -2,7 +2,7 @@
 	"name": "tinyurl",
 	"version": "1.0.0",
 	"private": true,
-	"homepage": "https://github.com/chaitanyajerripothula/tinyurl_frontend",
+	"homepage": "https://chaitanyajerripothula.github.io/tinyurl_frontend/",
 	"dependencies": {
 		"@babel/core": "^7.4.3",
 		"@svgr/webpack": "2.4.1",
