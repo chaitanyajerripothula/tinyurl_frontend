@@ -8,7 +8,7 @@ export default function Pricing() {
 		<div className="home-pricing" style={{ marginTop: '5vh' }}>
 			<Container fluid>
 				<Row>
-					<Col>
+					<Col style={{ marginTop: '20px' }}>
 						<Card style={{ height: '100%' }}>
 							<Table striped bordered hover style={{ height: '100%', width: '100%' }}>
 								<tbody>
@@ -58,7 +58,7 @@ export default function Pricing() {
 							</Table>
 						</Card>
 					</Col>
-					<Col>
+					<Col style={{ marginTop: '20px' }}>
 						<Card style={{ height: '100%' }}>
 							<Table striped bordered hover style={{ height: '100%', width: '100%' }}>
 								<tbody>
@@ -108,7 +108,7 @@ export default function Pricing() {
 							</Table>
 						</Card>
 					</Col>
-					<Col>
+					<Col style={{ marginTop: '20px' }}>
 						<Card style={{ height: '100%' }}>
 							<Table striped bordered hover style={{ height: '100%', width: '100%' }}>
 								<tbody>

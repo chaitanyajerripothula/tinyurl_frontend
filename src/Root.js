@@ -9,8 +9,8 @@ import store from './common/store';
 import routeConfig from './common/routeConfig';
 import history from './common/history';
 import { Navbar, Nav, Form, Button, Container, Row, Col } from 'react-bootstrap';
-import Login from './features//home/Login';
-import Register from './features//home/Register/Register';
+import Login from './features/home/Login/Login';
+import Register from './features/home/Register/Register';
 
 setConfig({
 	logLevel: 'debug'
@@ -73,29 +73,34 @@ function Root() {
 	const children = renderRouteConfigV3(routeConfig, '/');
 	return (
 		<div>
-			<Navbar bg="dark" variant="dark">
+			<Navbar bg="dark" variant="dark" expand="lg" fixed="top">
 				<Navbar.Brand href="home">TinyUrl</Navbar.Brand>
-				<Nav className="mr-auto">
-					<Nav.Link href="home">Home</Nav.Link>
-					<Nav.Link href="usage">Usage</Nav.Link>
-					<Nav.Link href="pricing">Pricing</Nav.Link>
-				</Nav>
-				<Form inline>
-					<Container>
-						<Row>
-							<Col>
-								<Button variant="outline-info" onClick={handleShow}>
-									Login
-								</Button>
-							</Col>
-							<Col>
-								<Button variant="outline-info" onClick={handleRegisterShow}>
-									Signup
-								</Button>
-							</Col>
-						</Row>
-					</Container>
-				</Form>
+				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+				<Navbar.Collapse id="responsive-navbar-nav">
+					<Nav className="mr-auto">
+						<Nav.Link href="home">Home</Nav.Link>
+						<Nav.Link href="usage">Usage</Nav.Link>
+						<Nav.Link href="pricing">Pricing</Nav.Link>
+					</Nav>
+					<Nav>
+						<Form inline>
+							<Container>
+								<Row>
+									<Col>
+										<Button variant="outline-info" onClick={handleShow}>
+											Login
+										</Button>
+									</Col>
+									<Col>
+										<Button variant="outline-info" onClick={handleRegisterShow}>
+											Signup
+										</Button>
+									</Col>
+								</Row>
+							</Container>
+						</Form>
+					</Nav>
+				</Navbar.Collapse>
 			</Navbar>
 			<div style={{ height: '100%' }}>
 				<Provider store={store}>

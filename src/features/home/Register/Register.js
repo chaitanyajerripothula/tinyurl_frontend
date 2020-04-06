@@ -37,10 +37,6 @@ export default function Register(props) {
 										<Form.Label>Verify Password</Form.Label>
 										<Form.Control type="password" placeholder="Password" />
 									</Form.Group>
-
-									<Form.Group controlId="formBasicCheckbox">
-										<Form.Check type="checkbox" label="Check me out" />
-									</Form.Group>
 								</Form>
 							</Row>
 							<Row style={{ float: 'right' }}>
