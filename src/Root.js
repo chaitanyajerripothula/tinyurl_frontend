@@ -73,14 +73,15 @@ function Root() {
 	const children = renderRouteConfigV3(routeConfig, '/');
 	return (
 		<div>
-			<Navbar bg="dark" variant="dark" expand="lg" fixed="top">
+			<Navbar bg="dark" variant="dark" expand="lg" sticky="top">
 				<Navbar.Brand href="home">TinyUrl</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
 					<Nav className="mr-auto">
-						<Nav.Link href="home">Home</Nav.Link>
-						<Nav.Link href="usage">Usage</Nav.Link>
-						<Nav.Link href="pricing">Pricing</Nav.Link>
+						<Nav.Link href="/home">Home</Nav.Link>
+						<Nav.Link href="/usage">Usage</Nav.Link>
+						<Nav.Link href="/pricing">Pricing</Nav.Link>
+						<Nav.Link href="/dashboard/view">Dashboard</Nav.Link>
 					</Nav>
 					<Nav>
 						<Form inline>

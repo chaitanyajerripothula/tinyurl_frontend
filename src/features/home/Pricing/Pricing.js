@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Pricing() {
 	return (
-		<div className="home-pricing" style={{ marginTop: '5vh' }}>
+		<div className="home-pricing" style={{ marginTop: '10vh' }}>
 			<Container fluid>
 				<Row>
 					<Col style={{ marginTop: '20px' }}>
