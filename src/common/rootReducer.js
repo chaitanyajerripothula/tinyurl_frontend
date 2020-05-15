@@ -12,10 +12,10 @@ import dashboardReducer from '../features/dashboard/redux/reducer';
 // So that it's easy for others to understand it and Rekit could manage them.
 
 const reducerMap = {
-  router: connectRouter(history),
-  home: homeReducer,
-  common: commonReducer,
-  dashboard: dashboardReducer,
+  router: connectRouter(history)
+  ,home: homeReducer
+  ,common: commonReducer
+  ,dashboard: dashboardReducer,
 };
 
 export default combineReducers(reducerMap);

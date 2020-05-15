@@ -4,6 +4,6 @@
 import { ViewDashboard } from './';
 
 export default {
-	path: 'dashboard',
-	childRoutes: [ { path: 'view', component: ViewDashboard, isIndex: true } ]
+	path: 'dashboard'
+	,childRoutes: [ { path: 'view', component: ViewDashboard, isIndex: true } ]
 };

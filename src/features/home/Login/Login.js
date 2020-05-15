@@ -1,6 +1,17 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-import { Modal, Button, Card, Container, Row, Col, Form } from 'react-bootstrap';
+import { 
+	  Modal
+	, Button
+	, Card
+	, Container
+	, Row
+	, Col
+	, Form 
+} from 'react-bootstrap';
+
+import { userActions } from '../redux/user.action';
+import { connect } from 'react-redux';
 
 export default function Login(props) {
 	return (
@@ -49,3 +60,16 @@ export default function Login(props) {
 
 Login.propTypes = {};
 Login.defaultProps = {};
+
+function mapState(state) {
+	const { loggingIn } = state.authentication;
+	return { loggingIn };
+}
+
+const actionCreators = {
+	login: userActions.login
+	,logout: userActions.logout
+};
+
+const connectedLoginPage = connect(mapState, actionCreators)(Login);
+export { connectedLoginPage as LoginPage };
